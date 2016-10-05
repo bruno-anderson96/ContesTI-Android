@@ -1,4 +1,4 @@
-package info.androidhive.contesti_ap.activity;
+package info.androidhive.materialdesign.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,11 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import info.androidhive.contesti_ap.R;
+import info.androidhive.materialdesign.R;
 
-/**
- * Created by Ravi on 29/07/15.
- */
+
 public class PerfilFragment extends Fragment {
 
     public PerfilFragment() {

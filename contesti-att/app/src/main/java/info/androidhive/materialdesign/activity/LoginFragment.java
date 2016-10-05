@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import info.androidhive.contesti_ap.R;
+import info.androidhive.materialdesign.R;
 
 
 public class LoginFragment extends Fragment {

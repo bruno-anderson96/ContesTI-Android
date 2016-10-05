@@ -1,8 +1,6 @@
-package info.androidhive.contesti_ap.activity;
+package info.androidhive.materialdesign.activity;
 
-/**
- * Created by Ravi on 29/07/15.
- */
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import info.androidhive.contesti_ap.R;
+import info.androidhive.materialdesign.R;
 
 
 public class InicioFragment extends Fragment {

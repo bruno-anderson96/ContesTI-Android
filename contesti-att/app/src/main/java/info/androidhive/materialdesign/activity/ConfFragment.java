@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import info.androidhive.contesti_ap.R;
+import info.androidhive.materialdesign.R;
 
 
 public class ConfFragment extends Fragment {
@@ -13,6 +13,7 @@ public class ConfFragment extends Fragment {
     public ConfFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

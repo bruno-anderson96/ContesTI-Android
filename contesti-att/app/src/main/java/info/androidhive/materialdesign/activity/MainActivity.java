@@ -1,4 +1,4 @@
-package info.androidhive.contesti_ap.activity;
+package info.androidhive.materialdesign.activity;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import info.androidhive.contesti_ap.R;
+import info.androidhive.materialdesign.R;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 

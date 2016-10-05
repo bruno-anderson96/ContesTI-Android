@@ -1,8 +1,6 @@
-package info.androidhive.contesti_ap.adapter;
+package info.androidhive.materialdesign.adapter;
 
-/**
- * Created by Ravi on 29/07/15.
- */
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.support.v7.widget.RecyclerView;
@@ -13,8 +11,8 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-import info.androidhive.contesti_ap.R;
-import info.androidhive.contesti_ap.model.NavDrawerItem;
+import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.model.NavDrawerItem;
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();

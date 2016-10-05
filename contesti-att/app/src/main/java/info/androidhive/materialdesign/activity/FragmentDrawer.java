@@ -1,8 +1,6 @@
-package info.androidhive.contesti_ap.activity;
+package info.androidhive.materialdesign.activity;
 
-/**
- * Created by Ravi on 29/07/15.
- */
+
 
 import android.content.Context;
 import android.os.Bundle;
@@ -21,9 +19,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.androidhive.contesti_ap.R;
-import info.androidhive.contesti_ap.adapter.NavigationDrawerAdapter;
-import info.androidhive.contesti_ap.model.NavDrawerItem;
+import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.adapter.NavigationDrawerAdapter;
+import info.androidhive.materialdesign.model.NavDrawerItem;
 
 public class FragmentDrawer extends Fragment {
 
