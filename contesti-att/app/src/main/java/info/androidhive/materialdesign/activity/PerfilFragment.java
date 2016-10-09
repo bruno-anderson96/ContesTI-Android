@@ -16,13 +16,13 @@ public class PerfilFragment extends Fragment {
         // Required empty public constructor
     }
 
-    @Override
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
     }
 
-    @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_perfil, container, false);
@@ -32,12 +32,12 @@ public class PerfilFragment extends Fragment {
         return rootView;
     }
 
-    @Override
+
     public void onAttach(Activity activity) {
         super.onAttach(activity);
     }
 
-    @Override
+
     public void onDetach() {
         super.onDetach();
     }

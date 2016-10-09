@@ -140,9 +140,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Nome:"
         android:id="@+id/textView15"
-        android:layout_below="@+id/linearLayout4"
-        android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18" />
+        android:layout_below="@+id/imageView2ss"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -150,8 +150,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Posição:"
         android:id="@+id/textView18"
+        android:layout_marginTop="9dp"
         android:layout_below="@+id/textView15"
-        android:layout_alignLeft="@+id/imageButton5"
-        android:layout_alignStart="@+id/imageButton5" />
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
 
 </RelativeLayout>
