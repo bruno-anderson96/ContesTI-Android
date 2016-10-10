@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText ft_cfSenha;
 
     private Button avancar;
+    private Button cad;
 
 
     public Login() {
@@ -41,6 +42,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         avancar.setOnClickListener(this);
 
+        cad = (Button) findViewById(R.id.cad);
+
+        cad.setOnClickListener(this);
+
     }
 
 
@@ -50,6 +55,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         Intent it = new Intent(this,MainActivity.class);
         startActivity(it);
 
+
+        Intent on = new Intent(this,SimuladoFragment.class);
+        startActivity(on);
+
+
+
     }
+
+
+
+
 }
 

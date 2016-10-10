@@ -130,7 +130,7 @@
     </LinearLayout>
 
     <Button
-        android:text="Se cadastre"
+        android:text="Cadastre-se"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cad"
