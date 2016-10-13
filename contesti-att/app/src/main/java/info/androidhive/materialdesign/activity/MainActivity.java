@@ -1,5 +1,6 @@
 package info.androidhive.materialdesign.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -70,11 +71,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent it = new Intent(MainActivity.this,Conf.class);
+            startActivity(it);
+
         }
 
         if (id == R.id.action_search) {
-            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Nao localizado!", Toast.LENGTH_SHORT).show();
             return true;
         }
 

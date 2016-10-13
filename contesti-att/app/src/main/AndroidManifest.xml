@@ -27,8 +27,15 @@
 
         </activity>
 
+        <activity
+            android:name=".activity.Cadastro">
 
+        </activity>
 
+        <activity
+            android:name=".activity.Conf">
+
+        </activity>
 
 
     <activity
