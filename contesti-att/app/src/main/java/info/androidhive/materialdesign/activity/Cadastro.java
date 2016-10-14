@@ -15,7 +15,11 @@ import info.androidhive.materialdesign.R;
 
 public class Cadastro extends AppCompatActivity implements View.OnClickListener{
 
+
+    private EditText ft_nome, ft_email, ft_senha2 , ft_cfSenha2;
     private Button pross;
+
+
 
 
     public Cadastro() {
@@ -26,6 +30,13 @@ public class Cadastro extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastro);
+
+
+
+        ft_nome = (EditText)findViewById(R.id.ft_nome);
+        ft_email = (EditText)findViewById(R.id.ft_email);
+        ft_senha2= (EditText)findViewById(R.id.ft_senha2);
+        ft_cfSenha2= (EditText)findViewById(R.id.ft_cfSenha2);
 
 
         pross = (Button) findViewById(R.id.pross);
