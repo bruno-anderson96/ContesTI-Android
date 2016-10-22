@@ -1,142 +1,62 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.Login"
-    android:background="#ffffff">
+    android:gravity="center"
+    android:background="#98F5FF">
 
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:layout_gravity="right"
-        android:weightSum="1"
-        android:layout_marginTop="10dp">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25px">
-
-    </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        android:id="@+id/imageView2ss"
+        android:layout_width="90dp"
+        android:layout_height="95dp"
         android:src="@drawable/logo"
-        android:layout_weight="0.40"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/imageView6"
+        android:layout_marginTop="-100dp"/>
 
 
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout7">
+        android:hint="Nome"
+        android:id="@+id/editNome"
+        android:layout_marginTop="80dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nome"
-            android:id="@+id/nome_1"
-            android:layout_marginLeft="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/ft_nome" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Email"
-            android:id="@+id/email_1"
-            android:layout_marginLeft="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/ft_email" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Senha"
-            android:id="@+id/senha_1"
-            android:layout_marginLeft="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/ft_senha2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Confirmar senha"
-            android:id="@+id/confirm_2"
-            android:layout_marginLeft="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/ft_cfSenha2" />
-    </LinearLayout>
-
-
-    <Button
-        android:text="Prosseguir!"
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/pross"
-        android:layout_below="@+id/linearLayout7"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:ems="10"
+        android:id="@+id/editEmail2" />
 
-    <TextView
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Cadastro"
-        android:id="@+id/textView9"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.40"
-        android:layout_below="@+id/imageView2ss"
-        android:layout_alignLeft="@+id/pross"
-        android:layout_alignStart="@+id/pross"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Senha"
+        android:id="@+id/editSenha2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btnCancelar" />
+
+        <Button
+            android:text="Registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btnRegistrar" />
 
 
-</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

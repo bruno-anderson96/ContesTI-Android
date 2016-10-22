@@ -26,17 +26,20 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".activity.MainActivity">
+            android:name=".activity.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
 
         </activity>
 
         <activity
-            android:name=".activity.Cadastro">
+            android:name=".activity.Cadastro"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
 
         </activity>
 
         <activity
-            android:name=".activity.Conf">
+            android:name=".activity.Conf"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
 
         </activity>
 

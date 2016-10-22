@@ -13,18 +13,11 @@ import info.androidhive.materialdesign.R;
  * Created by alenc on 12/10/2016.
  */
 
-public class Cadastro extends AppCompatActivity implements View.OnClickListener{
+public class Cadastro extends AppCompatActivity {
 
 
-    private EditText ft_nome, ft_email, ft_senha2 , ft_cfSenha2;
-    private Button pross;
-
-
-
-
-    public Cadastro() {
-        // Required empty public constructor
-    }
+    EditText editNome, editEmail2, editSenha2;
+    Button btnCancelar,btnRegistrar;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,31 +26,26 @@ public class Cadastro extends AppCompatActivity implements View.OnClickListener{
 
 
 
-        ft_nome = (EditText)findViewById(R.id.ft_nome);
-        ft_email = (EditText)findViewById(R.id.ft_email);
-        ft_senha2= (EditText)findViewById(R.id.ft_senha2);
-        ft_cfSenha2= (EditText)findViewById(R.id.ft_cfSenha2);
+        editNome = (EditText)findViewById(R.id.editNome);
+        editEmail2 = (EditText)findViewById(R.id.editEmail2);
+        editSenha2= (EditText)findViewById(R.id.editSenha2);
 
 
-        pross = (Button) findViewById(R.id.pross);
+        btnCancelar= (Button) findViewById(R.id.btnCancelar);
+        btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
 
-        pross.setOnClickListener(new View.OnClickListener(){
+        btnCancelar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                finish();
+            }
+        });
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
                 Intent it = new Intent(Cadastro.this, MainActivity.class);
                 startActivity(it);
             }
-
         });
-
-
-
-
-    }
-
-
-    @Override
-    public void onClick(View v) {
-
 
     }
 

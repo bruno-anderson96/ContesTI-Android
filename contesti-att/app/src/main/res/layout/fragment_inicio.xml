@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity.InicioFragment"
-    android:background="#ffffff">
+    android:background="#98F5FF">
 
 
     <ImageView
@@ -13,6 +13,7 @@
         android:id="@+id/imageView2"
         android:src="@drawable/logo"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -21,10 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
