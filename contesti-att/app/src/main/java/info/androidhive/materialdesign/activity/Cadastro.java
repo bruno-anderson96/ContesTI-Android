@@ -1,16 +1,19 @@
 package info.androidhive.materialdesign.activity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import info.androidhive.materialdesign.R;
 
@@ -21,70 +24,73 @@ import info.androidhive.materialdesign.R;
 public class Cadastro extends AppCompatActivity {
 
 
-    EditText editNome, editEmail2, editSenha2;
-    Button btnCancelar,btnRegistrar;
+    EditText name, password, email;
+    String Name, Password, Email;
+    Context ctx=this;
 
-    String url="";
-    String parametros="";
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastro);
-
-
-
-        editNome = (EditText)findViewById(R.id.editNome);
-        editEmail2 = (EditText)findViewById(R.id.editEmail2);
-        editSenha2= (EditText)findViewById(R.id.editSenha2);
-
-
-        btnCancelar= (Button) findViewById(R.id.btnCancelar);
-        btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
-
-        btnCancelar.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                finish();
-            }
-        });
-
-        btnRegistrar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                ConnectivityManager connMgr = (ConnectivityManager)
-                        getSystemService(Context.CONNECTIVITY_SERVICE);
-                NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-                if (networkInfo != null && networkInfo.isConnected()) {
-
-                    String email = editEmail2.getText().toString();
-                    String senha = editSenha2.getText().toString();
-
-                    if (email.isEmpty() || senha.isEmpty()){
-                        Toast.makeText(getApplicationContext(),"Nenhum campo pode estar vazio",Toast.LENGTH_LONG).show();
-
-                    } else {
-                        url = "http://192.168.1.5:80/login/logar.php";
-                        parametros = "?email=" + email + "&senha=" + senha;
-
-                        new SolicitaDados().execute(url);
-                    }
-                } else {
-                    Toast.makeText(getApplicationContext(),"Nenhuma conexão foi detectada",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
+        name = (EditText) findViewById(R.id.register_name);
+        password = (EditText) findViewById(R.id.register_password);
+        email = (EditText) findViewById(R.id.register_email);
     }
 
-    private class SolicitaDados extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls) {
-            return conexaoBD.postDados(urls[0],parametros);
-        }
-        // onPostExecute displays the results of the AsyncTask.
-        @Override
-        protected void onPostExecute(String resultado) {
-            editEmail2.setText(resultado);
+    public void register_register(View v){
+        Name = name.getText().toString();
+        Password = password.getText().toString();
+        Email = email.getText().toString();
+        BackGround b = new BackGround();
+        b.execute(Name, Password, Email);
+    }
 
+    class BackGround extends AsyncTask<String, String, String>{
+
+        @Override
+        protected String doInBackground(String... params) {
+            String name = params[0];
+            String password = params[1];
+            String email = params[2];
+            String data="";
+            int tmp;
+
+            try {
+                URL url = new URL("http://192.168.1.5:80/www/login1/register.php");
+                String urlParams = "name="+name+"&password="+password+"&email="+email;
+
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setDoOutput(true);
+                OutputStream os = httpURLConnection.getOutputStream();
+                os.write(urlParams.getBytes());
+                os.flush();
+                os.close();
+                InputStream is = httpURLConnection.getInputStream();
+                while((tmp=is.read())!=-1){
+                    data+= (char)tmp;
+                }
+                is.close();
+                httpURLConnection.disconnect();
+
+                return data;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                return "Exception: "+e.getMessage();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "Exception: "+e.getMessage();
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            if(s.equals("")){
+                s="Data saved successfully.";
+            }
+            Toast.makeText(ctx, s, Toast.LENGTH_LONG).show();
         }
     }
 
 }
+
